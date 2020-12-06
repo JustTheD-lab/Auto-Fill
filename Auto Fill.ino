@@ -27,11 +27,13 @@ void loop() {
 	{
 		if (digitalRead(SensL) == HIGH) 
 		{
+			digitalWrite(Pump, HIGH);
 			while (digitalRead (SensH)== HIGH)
 			{
-				digitalWrite(Pump, HIGH);
+				
 			}
 			digitalWrite(Pump, LOW);
+			delay(10000);
 		}
 	}
 	
